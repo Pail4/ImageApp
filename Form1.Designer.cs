@@ -28,12 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            LoadImage = new Button();
+            SuspendLayout();
+            // 
+            // LoadImage
+            // 
+            LoadImage.Location = new Point(33, 26);
+            LoadImage.Name = "LoadImage";
+            LoadImage.Size = new Size(296, 49);
+            LoadImage.TabIndex = 0;
+            LoadImage.Text = "Загрузить изображение";
+            LoadImage.UseVisualStyleBackColor = true;
+            LoadImage.Click += LoadImage_Click;
+            // 
+            // Form1
+            // 
+            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(800, 450);
+            Controls.Add(LoadImage);
+            Name = "Form1";
+            Text = "Form1";
+            ResumeLayout(false);
         }
 
         #endregion
+
+        private Button LoadImage;
     }
 }

@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace ImageApp
 {
     internal class ImageHandler // осуществляет всю работу
-    { 
+    {
         // Заг-заг  
+    OpenFileDialog? openFileDialog;
     }
 }
