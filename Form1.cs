@@ -13,7 +13,17 @@ namespace ImageApp
             openFileDialog.Filter = "Image Files (BMP,JPG,PNG,GIF)|*.JPG;*.PNG;*.GIF, *.BMP";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                //pictureBox.Image = new Bitmap(openFileDialog.FileName); <- по  заданию не требуется
+                try
+                {
+                    pictureBox1.Image = new Bitmap(openFileDialog.FileName);
+                }
+                catch
+                {
+                    Bitmap b = new Bitmap(pictureBox1.Width, pictureBox1.Height);
+                    Graphics g = Graphics.FromImage(b);
+                    g.DrawString("Невозможно отобразить\n        изображение", new Font("Time New Roman", 15), new SolidBrush(Color.Red), new PointF(10, 10));
+                    pictureBox1.Image = b;
+                }
             }
         }
     }
