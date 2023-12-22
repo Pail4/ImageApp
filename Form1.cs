@@ -13,7 +13,7 @@ namespace ImageApp
             openFileDialog.Filter = "Image Files (BMP,JPG,PNG,GIF)|*.JPG;*.PNG;*.GIF, *.BMP";
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                try
+                try///
                 {
                     pictureBox1.Image = new Bitmap(openFileDialog.FileName);
                 }
