@@ -32,48 +32,66 @@ namespace ImageApp
         /// </summary>
         private void InitializeComponent()
         {
-            LoadImage = new Button();
-            pictureBox1 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            SuspendLayout();
+            this.LoadImage = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.SuspendLayout();
             // 
             // LoadImage
             // 
-            LoadImage.Location = new Point(33, 26);
-            LoadImage.Name = "LoadImage";
-            LoadImage.Size = new Size(296, 49);
-            LoadImage.TabIndex = 0;
-            LoadImage.Text = "Загрузить изображение";
-            LoadImage.UseVisualStyleBackColor = true;
-            LoadImage.Click += LoadImage_Click;
+            this.LoadImage.Location = new System.Drawing.Point(20, 14);
+            this.LoadImage.Margin = new System.Windows.Forms.Padding(2);
+            this.LoadImage.Name = "LoadImage";
+            this.LoadImage.Size = new System.Drawing.Size(178, 25);
+            this.LoadImage.TabIndex = 0;
+            this.LoadImage.Text = "Загрузить изображение";
+            this.LoadImage.UseVisualStyleBackColor = true;
+            this.LoadImage.Click += new System.EventHandler(this.LoadImage_Click);
             // 
             // pictureBox1
             // 
-            pictureBox1.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox1.Location = new Point(195, 81);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(418, 324);
-            pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(117, 42);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(252, 169);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button1
+            // 
+            this.button1.BackgroundImage = global::ImageApp.Properties.Resources._1455554314_line_15_icon_icons_com_53330;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.button1.Location = new System.Drawing.Point(442, 15);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(26, 23);
+            this.button1.TabIndex = 2;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
-            Controls.Add(pictureBox1);
-            Controls.Add(LoadImage);
-            Name = "Form1";
-            Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ResumeLayout(false);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(480, 234);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.LoadImage);
+            this.Margin = new System.Windows.Forms.Padding(2);
+            this.Name = "Form1";
+            this.Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
 
         private Button LoadImage;
         private PictureBox pictureBox1;
+        private Button button1;
     }
 }
 
