@@ -16,9 +16,11 @@ namespace ImageApp
 {
     public partial class Form1 : Form
     {
+        private string Info { get; set; }
         public Form1()
         {
             InitializeComponent();
+            Info = "";
         }
 
         private void LoadImage_Click(object sender, EventArgs e)
@@ -64,9 +66,7 @@ namespace ImageApp
 
                     // Расположение файла
                     string fileLocation = fileInfo.FullName;
-
-                    // Вывод информации
-                    MessageBox.Show($"Время создания: {creationTime}\n" +
+                    Info = $"Время создания: {creationTime}\n" +
                                     $"Название файла: {fileName}\n" +
                                     $"Размер файла: {fileSizeFormatted}\n" +
                                     $"Разрешение: {resolution}\n\n" +
@@ -78,7 +78,9 @@ namespace ImageApp
                                     $"Фокусное расстояние: {focalLength}\n" +
                                     $"Режим вспышки: {flashMode}\n" +
                                     $"Представление цвета: {colorSpace}\n\n" +
-                                    $"Расположение файла: {fileLocation}");
+                                    $"Расположение файла: {fileLocation}";
+                    // Вывод информации
+                    MessageBox.Show(Info);
                 }
                 catch
                 {
@@ -88,6 +90,12 @@ namespace ImageApp
                     pictureBox1.Image = b;
                 }
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (!string.IsNullOrEmpty(Info))
+                Clipboard.SetText(Info);
         }
     }
 }
