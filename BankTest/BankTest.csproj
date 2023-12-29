@@ -9,6 +9,7 @@
     <IsTestProject>true</IsTestProject>
 	  <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
 	  <GenerateBindingRedirectsOutputType>true</GenerateBindingRedirectsOutputType>
+	  <OutputType>WinExe</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
