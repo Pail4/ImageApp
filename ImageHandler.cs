@@ -12,7 +12,7 @@ using System.Windows.Forms;
 
 namespace ImageApp
 {
-    internal class ImageHandler
+    public class ImageHandler
     {
         static public string GetImageInfo(string path)
         {
@@ -30,7 +30,7 @@ namespace ImageApp
             string fileSizeFormatted = fileSizeInMb.ToString("0.00") + " МБ";
 
             // Разрешение
-            string resolution = ImageHandler.GetImageResolution(path);
+            string resolution = GetImageResolution(path);
 
             var directories = ImageMetadataReader.ReadMetadata(imagePath);
             var exifSubIfdDirectory = directories.OfType<ExifSubIfdDirectory>().FirstOrDefault();
@@ -84,9 +84,10 @@ namespace ImageApp
             }
         }
 
-        static public void CopyInfo(string info)
+        static public string CopyInfo(string info)
         {
             Clipboard.SetText(info);
+            return Clipboard.GetText();
         }
     }
 }
